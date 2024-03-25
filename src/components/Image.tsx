@@ -3,12 +3,12 @@ import { FC } from "react"
 interface IProps {
     ImgUrl: string;
     alt: string;
-    classname: string;
+    className: string;
 }
-const Image: FC<IProps> = ({ ImgUrl, alt, classname }) => {
+const Image: FC<IProps> = ({ ImgUrl, alt, className }) => {
     return (
         <div>
-            <img src={ImgUrl} alt={alt} className={classname} />
+            <img src={ImgUrl} alt={alt} className={className} />
         </div>
     )
 }
