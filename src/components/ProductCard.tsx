@@ -26,10 +26,8 @@ const ProductCard: FC<IProps> = ({product}) => {
                 <Image ImgUrl={category.imageURL} alt={category.name} className={"w-10 h-10 rounded-full"} />
             </div>
             <div className="flex items-center justify-between mt-2 space-x-2">
-                <Button className="bg-indigo-600" onClick={()=>{
-                    console.log('hello')
-                }}>Edit</Button>
-                <Button className="bg-red-500">delete</Button>
+                <Button className="bg-indigo-600 hover:bg-indigo-800">Edit</Button>  
+                <Button className="bg-red-500 hover:bg-red-800">delete</Button>
             </div>
         </div>
     )
