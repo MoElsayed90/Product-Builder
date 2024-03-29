@@ -6,7 +6,7 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 const Button: FC<IProps> = ({ children, className, ...rest }) => {
     return (
-        <button className={`${className} p-2 w-full rounded-md text-white`} {...rest}>
+        <button className={`${className} p-2 w-full rounded-lg text-white`} {...rest}>
             {children}
         </button>
     )
