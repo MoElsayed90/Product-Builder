@@ -38,7 +38,7 @@ const onChangeHandler = (e:ChangeEvent<HTMLInputElement> )=>{
   const renderFormInputList = FormInputsList.map(input => (
     <div className="flex flex-col">
       <label htmlFor={input.id} className="mb-[2px] text-sm font-medium text-gray-700">{input.label}</label>
-      <Input type={input.type} id={input.id} name={input.name} value={""} onChange={onChangeHandler}/>
+      <Input type={input.type} id={input.id} name={input.name} value={product[input.name]} onChange={onChangeHandler}/>
     </div>
   )
   )
