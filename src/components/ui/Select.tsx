@@ -5,7 +5,7 @@ import { Categories } from '../data'
 import { ICategory } from '../interfaces'
 
 export interface IProps{
-  selected:ICategory;
+  selected:{name:string , imageURL:string};
   setSelected:(category:ICategory)=>void;
 }
 
