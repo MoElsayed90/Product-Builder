@@ -89,7 +89,7 @@ const App = () => {
     const filterd = products.filter(product => product.id !== productToEdit.id);
     setProducts(filterd)
     closeConfirmModal();
-    toast.success('Successfully deleted!')
+    toast('Successfully deleted!',  {style:{backgroundColor:'black',color:'white'},  icon: '👏'});
 
   }
 
