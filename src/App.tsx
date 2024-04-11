@@ -89,7 +89,7 @@ const App = () => {
     const filterd = products.filter(product => product.id !== productToEdit.id);
     setProducts(filterd)
     closeConfirmModal();
-    toast('Successfully deleted!',  {style:{backgroundColor:'black',color:'white'},  icon: '👏'});
+    toast('Successfully deleted!',  {duration:2000,style:{backgroundColor:'black',color:'white'},  icon: '👏'});
 
   }
 
@@ -112,6 +112,7 @@ const App = () => {
     setProduct(defaultProductObj);
     setTempColors([])
     closeModal()
+    toast('Successfully added!',  {duration:2000,style:{backgroundColor:'green',color:'white'},  icon: '🐤'});
   }
   const onSubmitEditHandler = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -134,6 +135,7 @@ const App = () => {
     setProducts(updateProduct)
     setTempColors([])
     closeEditModal()
+    toast('Successfully Edited!',  {duration:2000,style:{backgroundColor:'gray',color:'white'},  icon: '✔️'});
   }
 
   /* ------- RENDER -------  */
@@ -203,8 +205,8 @@ const App = () => {
             ))}
           </div>
           <div className="flex items-center space-x-3" >
-            <Button className="bg-indigo-600 hover:bg-indigo-800 capitalize">submit</Button>
-            <Button className="bg-gray-400 hover:bg-gray-600 capitalize" onClick={onCancel}>close</Button>
+            <Button className="bg-indigo-700 hover:bg-indigo-800 capitalize">submit</Button>
+            <Button className="bg-[#f5f5fa] hover:bg-gray-300 !text-black capitalize" onClick={onCancel}>close</Button>
           </div>
         </form>
       </Modal>
@@ -227,8 +229,8 @@ const App = () => {
             ))}
           </div>
           <div className="flex items-center space-x-3" >
-            <Button className="bg-indigo-600 hover:bg-indigo-800 capitalize">submit</Button>
-            <Button className="bg-gray-400 hover:bg-gray-600 capitalize" onClick={onCancel}>close</Button>
+            <Button className="bg-indigo-700 hover:bg-indigo-800   capitalize">submit</Button>
+            <Button className="bg-[#f5f5fa] hover:bg-gray-300 !text-black capitalize" onClick={onCancel}>close</Button>
           </div>
         </form>
       </Modal>
@@ -241,8 +243,8 @@ const App = () => {
       sales history, and other related information will also be deleted. Please make sure this is the intended
       action.">
         <div className="flex items-center space-x-3">
-          <Button className="bg-[#c2344d] ☐hover:bg-red-800" onClick={removeProductHandler}>Yes, remove </Button>
-          <Button className="■bg_[#f5f5fa] hover:bg-gray-300 text-black" onClick={closeConfirmModal}>
+          <Button className="bg-[#c2344d] hover:bg-red-800" onClick={removeProductHandler}>Yes, remove </Button>
+          <Button className="bg-[#f5f5fa] hover:bg-gray-300 !text-black" onClick={closeConfirmModal}>
             Cancel
           </Button>
         </div>
